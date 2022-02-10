@@ -1,3 +1,4 @@
+
 import java.util.Scanner;
 
 public class Launcher {
@@ -18,11 +19,9 @@ public class Launcher {
 				break;
 			}
 			if(cmd == null) {
-				System.out.println("Invalid command !");
-				sc.close();
-				return;
+				System.out.println("Unkown command");
 			}
-		} while(!cmd.run(sc));
+		} while(cmd == null || !cmd.run(sc));
 		sc.close();
 	}
 }

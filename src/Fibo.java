@@ -19,7 +19,7 @@ public class Fibo implements Command {
 				sc.close();
 				return false;
 			}
-			int u = 0, v = 1;
+			int u = 1, v = 1;
 			for(int j = 2; j < i; j++) {
 				int temp = u+v;
 				u = v;

@@ -30,7 +30,7 @@ public class Freq implements Command {
 		Arrays.stream(words).filter((str) -> !str.isBlank())
 		.collect(Collectors.groupingBy((str) -> str)).entrySet().stream()
 		.sorted(Comparator.comparingInt((e) -> -e.getValue().size())).limit(3)
-		.forEach((str) -> System.out.println(str.getKey()));
+		.forEach((str) -> System.out.print(str.getKey() + " "));
 		in.close();
 	}
 
@@ -51,7 +51,7 @@ public class Freq implements Command {
 			Arrays.stream(words).filter((str) -> !str.isBlank())
 			.collect(Collectors.groupingBy((str) -> str)).entrySet().stream()
 			.sorted(Comparator.comparingInt((e) -> -e.getValue().size())).limit(3)
-			.forEach((str) -> System.out.println(str.getKey()));
+			.forEach((str) -> System.out.print(str.getKey() + " "));
 		} catch (IOException e) {
 			System.out.println("Unreadable file : " + e.getClass() + " " + e.getMessage());
 		}
